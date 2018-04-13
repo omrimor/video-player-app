@@ -1,0 +1,29 @@
+.search-bar {
+  margin-bottom: 30px;
+}
+
+.search-bar__intro {
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.search-bar__input {
+  width: 27em;
+  padding: 7px 5px;
+  margin-right: 5px;
+  border: 1px solid var(--primary-color);
+}
+
+.search-bar__btn {
+  font-weight: bold;
+  width: 5em;
+  padding: 7px 0;
+  border: none;
+  background: var(--primary-color);
+  color: var(--base-color-white)
+}
+
+.search-bar__btn:hover {
+  cursor: pointer;
+  background: var(--primary-color-darken);
+}

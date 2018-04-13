@@ -1,0 +1,18 @@
+.video-list__item {
+  padding: 18px 7px 5px;
+  border-bottom: 1px solid var(--primary-color);
+}
+
+.video-list__item:first-child {
+  border-top: 1px solid var(--primary-color);
+}
+
+.video-list__item__title {
+  margin: 0;
+}
+
+.video-list__item__duration {
+  display: block;
+  margin-top: 5px;
+  font-style: italic;
+}

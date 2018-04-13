@@ -1,0 +1,7 @@
+.video-player-placeholder {
+  width: 640px;
+  height: 380px;
+  border: 1px solid #bdc3c7;
+  text-align: center;
+  padding-top: 60px;
+}
