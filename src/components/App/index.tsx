@@ -1,11 +1,13 @@
 import * as React from 'react';
 import { connect } from 'react-redux';
-import './App.css';
 
 import VideoPlayer from '../videoPlayer/VideoPlayer';
 import AddVideo from '../addVideo/AddVideo';
 import VideoList from '../videoList/VideoList';
 import { getVideos, getNextVideo } from '../../reducers/videosReducer';
+import * as types from '../../consts/types';
+
+import './App.css';
 
 interface Props {
   videos?: any;
@@ -31,7 +33,7 @@ export class App extends React.Component<Props> {
   }
 }
 
-const mapStateToProps = (state: any) => ({
+const mapStateToProps = (state: types.StoreState) => ({
   videos: getVideos(state.videos),
   currentVideoId: getNextVideo(state.videos)
 });

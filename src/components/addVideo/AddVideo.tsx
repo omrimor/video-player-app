@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 
 import Spinner from '../common/Spinner';
 import { getRequestsCount } from '../../reducers/networkReducer';
+import * as types from '../../consts/types';
 import * as actions from '../../actions/videos';
 import './AddVideo.css';
 
@@ -81,7 +82,7 @@ export class AddVideo extends React.Component<Props, State> {
   }
 }
 
-const mapStateToProps = (state: any) => ({
+const mapStateToProps = (state: types.StoreState) => ({
   pending: getRequestsCount(state.shared.networkReqests, 'fetchYouTubeVideo') > 0,
 });
 

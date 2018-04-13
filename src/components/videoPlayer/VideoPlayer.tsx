@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import YouTube from 'react-youtube';
 
 import { setNextVideoItem } from '../../actions/videos';
+
 import './VideoPlayer.css';
 
 interface Props {

@@ -1,6 +1,7 @@
 import * as React from 'react';
 
 import VideoItem from '../videoItem/VideoItem';
+
 import './VideoList.css';
 
 export interface Props {

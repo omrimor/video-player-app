@@ -1,7 +1,9 @@
 import * as React from 'react';
 import { connect } from 'react-redux';
 
+import * as types from '../../consts/types';
 import { getVideoDetails } from '../../reducers/videosReducer';
+
 import './VideoItem.css';
 
 interface Props {
@@ -18,7 +20,7 @@ export function VideoItem ({ videoId, videoItem }: Props) {
   );
 }
 
-const mapStateToProps = (state: any, ownProps: Props) => ({
+const mapStateToProps = (state: types.StoreState, ownProps: Props) => ({
   videoItem: getVideoDetails(state.videos, ownProps.videoId)
 });
 
