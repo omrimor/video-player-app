@@ -7,7 +7,6 @@ import multiMiddleware from './middlewares/multiMiddleware';
 import youTubeSearchMiddleware from './middlewares/youTubeSearchMiddleware';
 
 const initState = {};
-// const enhancers: any[] = [];
 const middleware = [
   logMiddleware,
   multiMiddleware,
