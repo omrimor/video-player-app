@@ -12,8 +12,10 @@ const setup = () => {
     videoItem: {
       title: 'test title',
       duration: '11:11'
-    };
+    },
+    removeVideoItem: jest.fn()
   };
+
   const enzymeWrapper = enzyme.shallow(<VideoItem {...props} />);
   return {
     props,
@@ -26,6 +28,7 @@ it('renders video item component with title and duration', () => {
   expect(enzymeWrapper.find('.video-list__item')).toHaveLength(1);
   expect(enzymeWrapper.find('.video-list__item__title')).toHaveLength(1);
   expect(enzymeWrapper.find('.video-list__item__duration')).toHaveLength(1);
+  expect(enzymeWrapper.find('.video-list__item__remove-btn')).toHaveLength(1);
 });
 
 it('renders correct title from videoItem prop', () => {
@@ -36,4 +39,11 @@ it('renders correct title from videoItem prop', () => {
 it('renders correct duration from videoItem prop', () => {
   const { enzymeWrapper, props } = setup();
   expect(enzymeWrapper.find('.video-list__item__duration').text()).toEqual(props.videoItem.duration);
+});
+
+it('click remove button trigger actionCreator', () => {
+  const { enzymeWrapper, props } = setup();
+  enzymeWrapper.find('.video-list__item__remove-btn').simulate('click');
+  expect(props.removeVideoItem).toHaveBeenCalled();
+  expect(props.removeVideoItem).toHaveBeenCalledWith(props.videoId);
 });

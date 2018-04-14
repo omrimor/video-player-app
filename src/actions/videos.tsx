@@ -8,6 +8,13 @@ export const addVideoItem = (video: any) => ({
   }
 });
 
+export const removeVideoItem = (videoId: string) => ({
+  type: consts.REMOVE_VIDEO_ITEM,
+  payload: {
+    videoId
+  }
+});
+
 export const setNextVideoItem = () => ({
   type: consts.SET_NEXT_VIDEO_ITEM
 });

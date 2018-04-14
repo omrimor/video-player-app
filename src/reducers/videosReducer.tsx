@@ -12,6 +12,9 @@ export default (state = initState, action: any) => {
       const videoItem = normelizeVideoItem(action.payload.video);
       return state.set(videoItem.id, videoItem);
     }
+    case consts.REMOVE_VIDEO_ITEM: {
+      return state.without((value, key) => key === action.payload.videoId);
+    }
     case consts.SET_NEXT_VIDEO_ITEM: {
       const firstInLine = Object.keys(state)[0];
       return state.without((value, key) => key === firstInLine);

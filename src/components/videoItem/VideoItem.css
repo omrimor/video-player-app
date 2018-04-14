@@ -11,8 +11,25 @@
   margin: 0;
 }
 
+.video-list__item__additional-info {
+  text-align: right;
+  margin-top: 8px;
+}
+
 .video-list__item__duration {
-  display: block;
-  margin-top: 5px;
+  display: inline-block;
   font-style: italic;
+}
+
+.video-list__item__remove-btn {
+  display: inline-block;
+  border-radius: 5px;
+  background: var(--base-color-white);
+  border: 1px solid var(--base-font-color);
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.video-list__item__remove-btn:hover {
+  border-color: var(--primary-color-darken);
 }
