@@ -15,7 +15,7 @@ export default youTubeSearchMiddleware;
 // constants
 // For simplecity declared here
 const YOU_TUBE_BASE_URL: string = 'https://www.googleapis.com/youtube/v3/videos';
-const YOU_TUBE_KEY: string = 'AIzaSyBfA24hvWAwhbsda8LFpGPpO8cf31i7w_4';
+const YOU_TUBE_KEY: string = '';
 const YOU_TUBE_PART: string = 'snippet,contentDetails';
 
 // Helpers
